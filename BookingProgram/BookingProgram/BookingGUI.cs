@@ -45,34 +45,37 @@ namespace BookingProgram
                         where bruger.email == email1
                         select bruger;
 
+            if(query == null)
+            { MessageBox.Show("This email doess not exist"); }
 
-
-            this.Hide();
+            
 
 
 
             foreach (var result in query)
             {
-                if (result.password == textBox2.Text)
+                if (result.password == textBox2.Text && result.email == textBox1.Text)
                 {
                     int LoginID = result.brugerID;
                     if (result.administrator == true)
                     {
                         MessageBox.Show("Welcome, (Admin) " + result.fornavn + " " + result.efternavn);
                         AdminForm adminForm = new AdminForm(result.brugerID);
+                        this.Hide();
                         adminForm.Show();
                     }
                     else if (result.administrator == false)
                     {
                         MessageBox.Show("Welcome, (User) " + result.fornavn + " " + result.efternavn);
                         BrugerForm brugerForm = new BrugerForm(result.brugerID);
+                        this.Hide();
                         brugerForm.Show();
                     }
                     break;
                 }
                 else
                 {
-                    MessageBox.Show("Unsuccesful login \\n The password is incorrect!");
+                    MessageBox.Show("Unsuccesful login - The password is incorrect!");
                     break;
                 }
             }
