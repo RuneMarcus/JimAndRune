@@ -42,6 +42,7 @@ namespace BookingProgram
 
             this.Hide();
             adminForm.Show();
+            brugerForm.Show();
             
 
 

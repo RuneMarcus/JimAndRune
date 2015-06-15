@@ -29,3 +29,6 @@ C:\Users\POU\documents\visual studio 2013\Projects\BookingProgram\BookingProgram
 C:\Users\52948\Documents\Visual Studio 2013\Projects\BookingProgram\BookingProgram\bin\Debug\BookingProgram.exe.config
 C:\Users\52948\Documents\Visual Studio 2013\Projects\BookingProgram\BookingProgram\obj\Debug\BookingProgram.exe
 C:\Users\52948\Documents\Visual Studio 2013\Projects\BookingProgram\BookingProgram\obj\Debug\BookingProgram.pdb
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\BookingProgram\bin\Debug\BookingProgram.exe.config
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\BookingProgram\obj\Debug\BookingProgram.exe
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\BookingProgram\obj\Debug\BookingProgram.pdb
