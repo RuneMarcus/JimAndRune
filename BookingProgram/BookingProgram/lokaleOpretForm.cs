@@ -46,9 +46,8 @@ namespace BookingProgram
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AdminForm adminForm = new AdminForm();
 
-            adminForm.Show();
+            this.DialogResult = DialogResult.OK;
             this.Hide();
         }
     }
