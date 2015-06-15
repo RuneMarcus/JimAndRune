@@ -13,7 +13,7 @@ namespace BookingProgram
 {
     public partial class AdminForm : Form
     {
-        public AdminForm()
+        public AdminForm(int loginID)
         {
             InitializeComponent();
         }

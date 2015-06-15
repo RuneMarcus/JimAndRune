@@ -45,8 +45,7 @@ namespace BookingProgram
                         where bruger.email == email1
                         select bruger;
 
-            BrugerForm brugerForm = new BrugerForm(int loginID);
-            AdminForm adminForm = new AdminForm(int loginID);
+
 
             this.Hide();
 
@@ -57,15 +56,17 @@ namespace BookingProgram
                 if (result.password == textBox2.Text)
                 {
                     int LoginID = result.brugerID;
-                    if(result.administrator == true)
+                    if (result.administrator == true)
                     {
                         MessageBox.Show("Welcome, (Admin) " + result.fornavn + " " + result.efternavn);
-                        adminForm.Show(result.brugerID);
+                        AdminForm adminForm = new AdminForm(result.brugerID);
+                        adminForm.Show();
                     }
                     else if (result.administrator == false)
                     {
                         MessageBox.Show("Welcome, (User) " + result.fornavn + " " + result.efternavn);
-                        brugerForm.Show(result.brugerID);
+                        BrugerForm brugerForm = new BrugerForm(result.brugerID);
+                        brugerForm.Show();
                     }
                     break;
                 }
