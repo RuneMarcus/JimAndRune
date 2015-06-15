@@ -10,11 +10,15 @@ using System.Windows.Forms;
 
 namespace BookingProgram
 {
+    
     public partial class BrugerForm : Form
     {
+        int bruger;
         public BrugerForm(int loginID)
         {
             InitializeComponent();
+
+            bruger = loginID;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -24,12 +28,18 @@ namespace BookingProgram
 
             System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
             cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "DELETE Brugere WHERE BrugerID = 5";
+            cmd.CommandText = "DELETE Brugere WHERE BrugerID = " + bruger;
             cmd.Connection = sqlConnection1;
 
             sqlConnection1.Open();
             cmd.ExecuteNonQuery();
             sqlConnection1.Close();
         }
+
+        
+
+        
+
+        
     }
 }
