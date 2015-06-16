@@ -8,16 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using Context;
 
 namespace BookingProgram
 {
     public partial class BookingForm : Form
     {
-        IQueryable<Context.Lokale> lokaleID;
-        public BookingForm(IQueryable<Context.Lokale> lokaleNavn)
+        
+        public BookingForm()
         {
+            FillLokaler();
             InitializeComponent();
-            lokaleID = lokaleNavn;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -26,14 +27,23 @@ namespace BookingProgram
         }
 
 
-        //public void FillLokaler(IQueryable BookingFill)
-        //{
-        //    foreach (Lokale result in BookingFill)
-        //    {
-        //        comboBox1.Items.Add(result.);
+        public void FillLokaler()
+        {
+            using (Context.BookingContext context = new Context.BookingContext())
+            {
 
-        //    }
-        //}
+                IQueryable<Context.Lokale> lokale_query =
+                            from lokale in context.Lokaler
+                            select lokale;
+
+
+                foreach (Context.Lokale result in lokale_query)
+                {
+                    //comboBox1.Items.Add(result.lokaleID);
+                    Console.WriteLine(result.lokaleID);
+                }
+            }
+        }
 
     }
 }

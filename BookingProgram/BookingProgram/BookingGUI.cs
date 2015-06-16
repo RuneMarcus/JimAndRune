@@ -27,10 +27,10 @@ namespace BookingProgram
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+
             using (Context.BookingContext context = new Context.BookingContext())
             {
-
-
 
             if (textBox1.Text == "")
             {
@@ -53,9 +53,7 @@ namespace BookingProgram
             IQueryable<Context.Lokale> lokale_query =
                         from lokale in context.Lokaler
                         select lokale;
-
-            //BookingForm(lokale_query);
-
+         
 
             if(query == null)
             { MessageBox.Show("This email doess not exist"); }
