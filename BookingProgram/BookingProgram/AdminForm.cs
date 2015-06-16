@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BookingProgram;
+using System.Xml;
+using Context;
 
 namespace BookingProgram
 {
@@ -107,6 +109,52 @@ namespace BookingProgram
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void xml_Click(object sender, EventArgs e)
+        {
+            using (Context.BookingContext context = new Context.BookingContext())
+            {
+
+                var query = from booking in context.Bookings
+                            select booking;
+
+
+                String xmlFileName = ("output.xml");
+
+                XmlWriterSettings settings = new XmlWriterSettings();
+                settings.Indent = true;
+                settings.NewLineOnAttributes = false;
+
+                //Et XML document skal have et og kun et root element. Her er det PCdatabase
+                XmlWriter xml = XmlWriter.Create(xmlFileName, settings);
+                xml.WriteStartElement("BookingDatabase");
+
+                foreach (var resultat in query)
+                {
+                    //Tilføj PC No1
+                    xml.WriteStartElement("Booking");
+                    xml.WriteAttributeString("No", Convert.ToString(resultat.BookingID));
+                    xml.WriteStartElement("UserID");
+                    xml.WriteValue(Convert.ToString(resultat.Bruger.brugerID));
+                    xml.WriteEndElement();
+                    xml.WriteStartElement("Lokale");
+                    xml.WriteValue(Convert.ToString(resultat.Lokale.lokaleID));
+                    xml.WriteEndElement();
+                    xml.WriteStartElement("BookingStart");
+                    xml.WriteValue(Convert.ToString(resultat.startTidspunkt));
+                    xml.WriteEndElement();
+                    xml.WriteStartElement("BookingEnd");
+                    xml.WriteValue(Convert.ToString(resultat.slutTidspunkt));
+                    xml.WriteEndElement();
+                    xml.WriteEndElement();
+                }
+
+                xml.WriteEndElement();
+                xml.Close();
+                MessageBox.Show("XML completed!");
+            }
 
         }
     }

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BookingDatabase>
+  <Booking No="1">
+    <UserID>1</UserID>
+    <Lokale>13</Lokale>
+    <BookingStart>04-06-2015 12:30:00</BookingStart>
+    <BookingEnd>04-06-2015 13:30:00</BookingEnd>
+  </Booking>
+  <Booking No="2">
+    <UserID>1</UserID>
+    <Lokale>18</Lokale>
+    <BookingStart>04-06-2015 12:30:00</BookingStart>
+    <BookingEnd>04-06-2015 13:30:00</BookingEnd>
+  </Booking>
+  <Booking No="3">
+    <UserID>1</UserID>
+    <Lokale>10</Lokale>
+    <BookingStart>11-11-2015 10:00:00</BookingStart>
+    <BookingEnd>11-11-2015 12:00:00</BookingEnd>
+  </Booking>
+</BookingDatabase>

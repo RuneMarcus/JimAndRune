@@ -43,6 +43,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.BrugerHistorikButton = new System.Windows.Forms.Button();
             this.LokaleHistorikButton = new System.Windows.Forms.Button();
+            this.xml = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -195,11 +196,22 @@
             this.LokaleHistorikButton.UseVisualStyleBackColor = true;
             this.LokaleHistorikButton.Click += new System.EventHandler(this.LokaleHistorikButton_Click);
             // 
+            // xml
+            // 
+            this.xml.Location = new System.Drawing.Point(171, 323);
+            this.xml.Name = "xml";
+            this.xml.Size = new System.Drawing.Size(94, 45);
+            this.xml.TabIndex = 15;
+            this.xml.Text = "Booking Output (XML)";
+            this.xml.UseVisualStyleBackColor = true;
+            this.xml.Click += new System.EventHandler(this.xml_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 457);
+            this.Controls.Add(this.xml);
             this.Controls.Add(this.LokaleHistorikButton);
             this.Controls.Add(this.BrugerHistorikButton);
             this.Controls.Add(this.label4);
@@ -240,5 +252,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BrugerHistorikButton;
         private System.Windows.Forms.Button LokaleHistorikButton;
+        private System.Windows.Forms.Button xml;
     }
 }
