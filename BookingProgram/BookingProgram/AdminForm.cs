@@ -51,7 +51,6 @@ namespace BookingProgram
         private void LokaleOpretButton_Click(object sender, EventArgs e)
         {
             lokaleOpretForm lokaleOpretForm = new lokaleOpretForm();
-
             this.Hide();
             lokaleOpretForm.ShowDialog();
             this.Show();
