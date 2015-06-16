@@ -38,7 +38,7 @@ namespace BookingProgram
 
         private void Booking_Click(object sender, EventArgs e)
         {
-            BookingForm userBooking = new BookingForm();
+            BookingForm userBooking = new BookingForm(bruger);
 
             this.Hide();
             userBooking.ShowDialog();

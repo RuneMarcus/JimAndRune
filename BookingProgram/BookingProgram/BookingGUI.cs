@@ -50,10 +50,7 @@ namespace BookingProgram
                         where bruger.email == email1
                         select bruger;
 
-            IQueryable<Context.Lokale> lokale_query =
-                        from lokale in context.Lokaler
-                        select lokale;
-         
+            
 
             if(query == null)
             { MessageBox.Show("This email doess not exist"); }
