@@ -33,7 +33,7 @@ namespace BookingProgram
                 ctx.Brugere.Add(user);
                 ctx.SaveChanges();
             }
-            */
+
             using (var ctx = new BookingContext())
             {
                 Lokale lokale = new Lokale()
@@ -47,7 +47,7 @@ namespace BookingProgram
                 ctx.Lokaler.Add(lokale);
                 ctx.SaveChanges();
             }
-
+            */
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

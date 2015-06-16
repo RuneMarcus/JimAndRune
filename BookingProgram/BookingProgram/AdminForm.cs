@@ -18,7 +18,7 @@ namespace BookingProgram
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void LogAfButton_Click(object sender, EventArgs e)
         {
             BookingGUI loginForm = new BookingGUI();
 
@@ -26,9 +26,12 @@ namespace BookingProgram
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void BrugerOpretButton_Click(object sender, EventArgs e)
         {
-
+            brugerOpretForm brugerOpretForm = new brugerOpretForm();
+            this.Hide();
+            brugerOpretForm.ShowDialog();
+            this.Show();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -36,15 +39,14 @@ namespace BookingProgram
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void BrugerSletButton_Click(object sender, EventArgs e)
         {
             brugerSletForm brugerSletForm = new brugerSletForm();
-
             this.Hide();
             brugerSletForm.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void LokaleOpretButton_Click(object sender, EventArgs e)
         {
             lokaleOpretForm lokaleOpretForm = new lokaleOpretForm();
 
@@ -53,12 +55,59 @@ namespace BookingProgram
             this.Show();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void LokaleSletButton_Click(object sender, EventArgs e)
         {
             lokaleSletForm lokaleSletForm = new lokaleSletForm();
 
             this.Hide();
             lokaleSletForm.Show();
+        }
+
+        private void BrugerViewButton_Click(object sender, EventArgs e)
+        {
+            brugerViewForm brugerViewForm = new brugerViewForm();
+            this.Hide();
+            brugerViewForm.Show();
+        }
+
+        private void LokaleViewButton_Click(object sender, EventArgs e)
+        {
+            lokaleViewForm lokaleViewForm = new lokaleViewForm();
+            this.Hide();
+            lokaleViewForm.Show();
+        }
+
+        private void LokaleRedigerButton_Click(object sender, EventArgs e)
+        {
+            lokaleRedigerForm lokaleRedigerForm = new lokaleRedigerForm();
+            this.Hide();
+            lokaleRedigerForm.Show();
+        }
+
+        private void BrugerRedigerButton_Click(object sender, EventArgs e)
+        {
+            brugerRedigerForm brugerRedigerForm = new brugerRedigerForm();
+            this.Hide();
+            brugerRedigerForm.Show();
+        }
+
+        private void BrugerHistorikButton_Click(object sender, EventArgs e)
+        {
+            brugerHistorikForm brugerHistorikForm = new brugerHistorikForm();
+            this.Hide();
+            brugerHistorikForm.Show();
+        }
+
+        private void LokaleHistorikButton_Click(object sender, EventArgs e)
+        {
+            lokaleHistorikForm lokaleHistorikForm = new lokaleHistorikForm();
+            this.Hide();
+            lokaleHistorikForm.Show();
+        }
+
+        private void AdminForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

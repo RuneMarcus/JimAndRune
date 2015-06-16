@@ -16,5 +16,12 @@ namespace BookingProgram
         {
             InitializeComponent();
         }
+
+        private void lokaleViewForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the '_Context_BookingContextDataSet4.Lokaler' table. You can move, or remove it, as needed.
+            this.lokalerTableAdapter.Fill(this._Context_BookingContextDataSet4.Lokaler);
+
+        }
     }
 }
