@@ -63,8 +63,16 @@ namespace BookingProgram
                 {
                     Bruger = user,
                     Lokale = lokale,
-                    startTidspunkt = new DateTime(2015, 06, 04, 12, 30, 00),
-                    slutTidspunkt = new DateTime(2015, 06, 04, 13, 30, 00),
+                    startTidspunkt = new DateTime(
+                        Convert.ToInt32(YearDrop.Text),
+                        Convert.ToInt32(MonthDrop.Text), 
+                        Convert.ToInt32(DayDrop.Text),
+                        Convert.ToInt32(FromDrop.Text), 00, 00),
+                    slutTidspunkt = new DateTime(
+                        Convert.ToInt32(YearDrop.Text),
+                        Convert.ToInt32(MonthDrop.Text), 
+                        Convert.ToInt32(DayDrop.Text),
+                        Convert.ToInt32(ToDrop.Text), 00, 00),
                     godkendt = true
                 };
 
@@ -74,6 +82,23 @@ namespace BookingProgram
                 
             }
         }
+
+        private void DayDrop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FromDrop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ToDrop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
 
     }
 }
