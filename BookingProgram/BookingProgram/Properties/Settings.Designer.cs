@@ -43,5 +43,16 @@ namespace BookingProgram.Properties {
                 return ((string)(this["Context_BookingContextConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=np:\\\\.\\pipe\\LOCALDB#D3137691\\tsql\\query;Initial Catalog=Context.Booki" +
+            "ngContext;Integrated Security=True")]
+        public string Context_BookingContextConnectionString1 {
+            get {
+                return ((string)(this["Context_BookingContextConnectionString1"]));
+            }
+        }
     }
 }
