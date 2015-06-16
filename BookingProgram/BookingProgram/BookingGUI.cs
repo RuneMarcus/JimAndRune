@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+using Context;
 
 namespace BookingProgram
 {
@@ -27,6 +29,9 @@ namespace BookingProgram
         {
             using (Context.BookingContext context = new Context.BookingContext())
             {
+
+
+
             if (textBox1.Text == "")
             {
                 MessageBox.Show("This is not a valid email.");
@@ -40,16 +45,20 @@ namespace BookingProgram
             email1 = textBox1.Text;
             password1 = textBox2.Text;
 
-
+             
             var query = from bruger in context.Brugere
                         where bruger.email == email1
                         select bruger;
 
+            IQueryable<Context.Lokale> lokale_query =
+                        from lokale in context.Lokaler
+                        select lokale;
+
+            //BookingForm(lokale_query);
+
+
             if(query == null)
             { MessageBox.Show("This email doess not exist"); }
-
-            
-
 
 
             foreach (var result in query)
@@ -95,5 +104,10 @@ namespace BookingProgram
             this.Hide();
             nybrugerForm.Show();
         }
+
+
+
     }
+
+
 }
