@@ -71,7 +71,7 @@ namespace BookingProgram
                     else if (result.administrator == false)
                     {
                         MessageBox.Show("Welcome, (User) " + result.fornavn + " " + result.efternavn);
-                        BrugerForm brugerForm = new BrugerForm(result.brugerID);
+                        BrugerForm brugerForm = new BrugerForm(result.brugerID, result.email, result.fornavn);
                         this.Hide();
                         brugerForm.Show();
                     }
