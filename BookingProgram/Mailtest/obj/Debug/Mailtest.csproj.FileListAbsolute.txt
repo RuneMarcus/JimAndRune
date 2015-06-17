@@ -1,0 +1,6 @@
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Mailtest\bin\Debug\Mailtest.exe.config
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Mailtest\bin\Debug\Mailtest.exe
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Mailtest\bin\Debug\Mailtest.pdb
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Mailtest\obj\Debug\Mailtest.csprojResolveAssemblyReference.cache
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Mailtest\obj\Debug\Mailtest.exe
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Mailtest\obj\Debug\Mailtest.pdb
