@@ -14,11 +14,15 @@ namespace BookingProgram
     public partial class BrugerForm : Form
     {
         int bruger;
-        public BrugerForm(int loginID)
+        string emails;
+        string fornavne;
+        public BrugerForm(int loginID, string email, string fornavn)
         {
             InitializeComponent();
 
             bruger = loginID;
+            emails = email;
+            fornavne = fornavn;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -38,7 +42,7 @@ namespace BookingProgram
 
         private void Booking_Click(object sender, EventArgs e)
         {
-            BookingForm userBooking = new BookingForm(bruger);
+            BookingForm userBooking = new BookingForm(bruger, emails, fornavne);
 
             this.Hide();
             userBooking.ShowDialog();

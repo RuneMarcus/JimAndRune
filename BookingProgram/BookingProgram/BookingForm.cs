@@ -9,16 +9,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
 using Context;
+using System.Net.Mail;
+using System.Net;
 
 namespace BookingProgram
 {
     public partial class BookingForm : Form
     {
         int userId;
-        public BookingForm(int brugerID)
+        string emails;
+        string fornavne;
+        public BookingForm(int brugerID, string email, string fornavn)
         {
             InitializeComponent();
             userId = brugerID;
+            emails = email;
+            fornavne = fornavn;
             FillLokaler();
         }
 
@@ -76,11 +82,36 @@ namespace BookingProgram
                     godkendt = true
                 };
 
-
                 context.Bookings.Add(bookings);
                 context.SaveChanges();
+
+                var fromAddress = new MailAddress("VoresBookingService@gmail.com", "From BookingServiceMail");
+                var toAddress = new MailAddress(emails, "To " + fornavne);
+                const string fromPassword = "jimogrune";
+                string subject = "Hej " + fornavne + "!";
+                string body = "Tak for din booking. \\nBook start tid:" + bookings.startTidspunkt + " Book slut tid:" + bookings.slutTidspunkt + "\\nVi vil straks sørger for at dette lokale er klar når du skal bruge det. \\nMed Venlig Hilsen BookingService.";
+
+                var smtp = new SmtpClient
+                {
+                    Host = "smtp.gmail.com",
+                    Port = 587,
+                    EnableSsl = true,
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    UseDefaultCredentials = false,
+                    Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                };
+                using (var message = new MailMessage(fromAddress, toAddress)
+                {
+                    Subject = subject,
+                    Body = body
+                })
+                {
+                    smtp.Send(message);
+                }
                 
             }
+
+                
         }
 
         private void DayDrop_SelectedIndexChanged(object sender, EventArgs e)
