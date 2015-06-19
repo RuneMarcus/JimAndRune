@@ -47,7 +47,7 @@ namespace Mailtest
 
                         Console.WriteLine(mail.Subject);
                         Console.WriteLine(mail.Text);
-                        createBooking(createUser(mail.Sender.Address), createLokale(mail.Text) , mail.Text);
+                        createBooking(findUser(mail.Sender.Address), findLokale(mail.Text) , mail.Text);
                     }
                     imap.Close();
                     Thread.Sleep(200);
@@ -85,56 +85,25 @@ namespace Mailtest
             }
         }
 
-        public static Bruger createUser(string emailaddress)
+        public static Bruger findUser(string emailaddress)
         {
-            Bruger bruger_obj = new Bruger();
             using (Context.BookingContext context = new BookingContext())
             {
                 var user_query = from bruger in context.Brugere
                                  where bruger.email == emailaddress
                                  select bruger;
 
-                foreach (var result in user_query)
-                {
-                    Bruger user = new Bruger()
-                    {
-                        fornavn = result.fornavn,
-                        efternavn = result.efternavn,
-                        addresse = result.addresse,
-                        email = result.email,
-                        telefon = result.telefon,
-                        password = result.password,
-                        administrator = result.administrator
-                    };
-                    bruger_obj = user;
-                }
-                return bruger_obj;
+                return user_query.First<Bruger>();
             }
         }
 
-        public static Lokale createLokale(string mailtext)
+        public static Lokale findLokale(string mailtext)
         {
-            Lokale Lokale_obj = new Lokale();
+
             int lokaleIdentifier = Convert.ToInt32(mailtext.Split(' ')[1]);
             using (Context.BookingContext context = new BookingContext())
             {
-                var lokale_query = from lokale in context.Lokaler
-                                   where lokale.lokaleID == lokaleIdentifier
-                                   select lokale;
-
-                foreach (var result in lokale_query)
-                {
-                    Lokale lokaleobject = new Lokale()
-                    {
-                        lokaleID = result.lokaleID,
-                        addresse = result.addresse,
-                        areal = result.areal,
-                        pladsTil = result.areal,
-                        postnummer = result.postnummer
-                    };
-                    Lokale_obj = lokaleobject;
-                }
-                return Lokale_obj;
+                return context.Lokaler.Find(lokaleIdentifier);
             }
         }
 
