@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E65B3C0D-F8A6-4D45-80AE-9289A04782BD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BookingProgram</RootNamespace>
+    <AssemblyName>BookingProgram</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingForm.Designer.cs">
+      <DependentUpon>BookingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingGUI.Designer.cs">
+      <DependentUpon>BookingGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrugerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrugerForm.Designer.cs">
+      <DependentUpon>BrugerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="brugerHistorikForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="brugerHistorikForm.Designer.cs">
+      <DependentUpon>brugerHistorikForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="brugerOpretForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="brugerOpretForm.Designer.cs">
+      <DependentUpon>brugerOpretForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="brugerRedigerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="brugerRedigerForm.Designer.cs">
+      <DependentUpon>brugerRedigerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="brugerViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="brugerViewForm.Designer.cs">
+      <DependentUpon>brugerViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="lokaleHistorikForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lokaleHistorikForm.Designer.cs">
+      <DependentUpon>lokaleHistorikForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lokaleOpretForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lokaleOpretForm.Designer.cs">
+      <DependentUpon>lokaleOpretForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lokaleRedigerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lokaleRedigerForm.Designer.cs">
+      <DependentUpon>lokaleRedigerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lokaleSletForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lokaleSletForm.Designer.cs">
+      <DependentUpon>lokaleSletForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lokaleViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lokaleViewForm.Designer.cs">
+      <DependentUpon>lokaleViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nybrugerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nybrugerForm.Designer.cs">
+      <DependentUpon>nybrugerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="brugerSletForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="brugerSletForm.Designer.cs">
+      <DependentUpon>brugerSletForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Context_BookingContextDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Context_BookingContextDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Context_BookingContextDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Context_BookingContextDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Context_BookingContextDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Context_BookingContextDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Context_BookingContextDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Context_BookingContextDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Context_BookingContextDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Context_BookingContextDataSet4.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingForm.resx">
+      <DependentUpon>BookingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingGUI.resx">
+      <DependentUpon>BookingGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrugerForm.resx">
+      <DependentUpon>BrugerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="brugerHistorikForm.resx">
+      <DependentUpon>brugerHistorikForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="brugerOpretForm.resx">
+      <DependentUpon>brugerOpretForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="brugerRedigerForm.resx">
+      <DependentUpon>brugerRedigerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="brugerSletForm.resx">
+      <DependentUpon>brugerSletForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="brugerViewForm.resx">
+      <DependentUpon>brugerViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lokaleHistorikForm.resx">
+      <DependentUpon>lokaleHistorikForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lokaleOpretForm.resx">
+      <DependentUpon>lokaleOpretForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lokaleRedigerForm.resx">
+      <DependentUpon>lokaleRedigerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lokaleSletForm.resx">
+      <DependentUpon>lokaleSletForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lokaleViewForm.resx">
+      <DependentUpon>lokaleViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nybrugerForm.resx">
+      <DependentUpon>nybrugerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="_Context_BookingContextDataSet.xsc">
+      <DependentUpon>_Context_BookingContextDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_Context_BookingContextDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Context_BookingContextDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Context_BookingContextDataSet.xss">
+      <DependentUpon>_Context_BookingContextDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_Context_BookingContextDataSet1.xsc">
+      <DependentUpon>_Context_BookingContextDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_Context_BookingContextDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Context_BookingContextDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Context_BookingContextDataSet1.xss">
+      <DependentUpon>_Context_BookingContextDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_Context_BookingContextDataSet2.xsc">
+      <DependentUpon>_Context_BookingContextDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_Context_BookingContextDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Context_BookingContextDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Context_BookingContextDataSet2.xss">
+      <DependentUpon>_Context_BookingContextDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_Context_BookingContextDataSet3.xsc">
+      <DependentUpon>_Context_BookingContextDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="_Context_BookingContextDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Context_BookingContextDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Context_BookingContextDataSet3.xss">
+      <DependentUpon>_Context_BookingContextDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="_Context_BookingContextDataSet4.xsc">
+      <DependentUpon>_Context_BookingContextDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="_Context_BookingContextDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Context_BookingContextDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Context_BookingContextDataSet4.xss">
+      <DependentUpon>_Context_BookingContextDataSet4.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Context\Context.csproj">
+      <Project>{7a14336b-7afa-41a8-b88b-89402c2275bc}</Project>
+      <Name>Context</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mailtest\Mailtest.csproj">
+      <Project>{d5dd815b-b699-49b9-9dd9-9891aa5f56d8}</Project>
+      <Name>Mailtest</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

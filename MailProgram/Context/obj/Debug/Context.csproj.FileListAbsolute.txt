@@ -1,0 +1,20 @@
+c:\users\pou\documents\visual studio 2013\Projects\BookingProgram\Context\bin\Debug\Context.dll.config
+c:\users\pou\documents\visual studio 2013\Projects\BookingProgram\Context\bin\Debug\Context.dll
+c:\users\pou\documents\visual studio 2013\Projects\BookingProgram\Context\bin\Debug\Context.pdb
+c:\users\pou\documents\visual studio 2013\Projects\BookingProgram\Context\bin\Debug\EntityFramework.dll
+c:\users\pou\documents\visual studio 2013\Projects\BookingProgram\Context\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\pou\documents\visual studio 2013\Projects\BookingProgram\Context\bin\Debug\EntityFramework.xml
+c:\users\pou\documents\visual studio 2013\Projects\BookingProgram\Context\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\pou\documents\visual studio 2013\Projects\BookingProgram\Context\obj\Debug\Context.dll
+c:\users\pou\documents\visual studio 2013\Projects\BookingProgram\Context\obj\Debug\Context.pdb
+C:\Users\POU\documents\visual studio 2013\Projects\BookingProgram\Context\obj\Debug\Context.csprojResolveAssemblyReference.cache
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Context\bin\Debug\Context.dll.config
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Context\bin\Debug\Context.dll
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Context\bin\Debug\Context.pdb
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Context\bin\Debug\EntityFramework.dll
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Context\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Context\bin\Debug\EntityFramework.xml
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Context\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Context\obj\Debug\Context.csprojResolveAssemblyReference.cache
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Context\obj\Debug\Context.dll
+C:\Users\POU\Desktop\JimAndRune\BookingProgram\Context\obj\Debug\Context.pdb
