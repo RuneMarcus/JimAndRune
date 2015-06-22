@@ -88,6 +88,15 @@
     <Compile Include="brugerOpretForm.Designer.cs">
       <DependentUpon>brugerOpretForm.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="brugerRedigerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="brugerRedigerForm.designer.cs">
+      <DependentUpon>brugerRedigerForm.cs</DependentUpon>
+    </Compile>
+>>>>>>> origin/master
     <Compile Include="brugerViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +182,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_Context_BookingContextDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Context_BookingContextDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Context_BookingContextDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Context_BookingContextDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Context_BookingContextDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_Context_BookingContextDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_Context_BookingContextDataSet9.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
@@ -303,6 +327,39 @@
     </None>
     <None Include="_Context_BookingContextDataSet4.xss">
       <DependentUpon>_Context_BookingContextDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="_Context_BookingContextDataSet5.xsc">
+      <DependentUpon>_Context_BookingContextDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="_Context_BookingContextDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Context_BookingContextDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Context_BookingContextDataSet5.xss">
+      <DependentUpon>_Context_BookingContextDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="_Context_BookingContextDataSet6.xsc">
+      <DependentUpon>_Context_BookingContextDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="_Context_BookingContextDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Context_BookingContextDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Context_BookingContextDataSet6.xss">
+      <DependentUpon>_Context_BookingContextDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="_Context_BookingContextDataSet9.xsc">
+      <DependentUpon>_Context_BookingContextDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="_Context_BookingContextDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_Context_BookingContextDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_Context_BookingContextDataSet9.xss">
+      <DependentUpon>_Context_BookingContextDataSet9.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
