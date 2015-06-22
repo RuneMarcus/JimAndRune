@@ -45,7 +45,8 @@ namespace BookingProgram
         {
             brugerSletForm brugerSletForm = new brugerSletForm();
             this.Hide();
-            brugerSletForm.Show();
+            brugerSletForm.ShowDialog();
+            this.Show();
         }
 
         private void LokaleOpretButton_Click(object sender, EventArgs e)
@@ -59,51 +60,57 @@ namespace BookingProgram
         private void LokaleSletButton_Click(object sender, EventArgs e)
         {
             lokaleSletForm lokaleSletForm = new lokaleSletForm();
-
             this.Hide();
-            lokaleSletForm.Show();
+            lokaleSletForm.ShowDialog();
+            this.Show();
         }
 
         private void BrugerViewButton_Click(object sender, EventArgs e)
         {
             brugerViewForm brugerViewForm = new brugerViewForm();
             this.Hide();
-            brugerViewForm.Show();
+            brugerViewForm.ShowDialog();
+            this.Show();
         }
 
         private void LokaleViewButton_Click(object sender, EventArgs e)
         {
             lokaleViewForm lokaleViewForm = new lokaleViewForm();
             this.Hide();
-            lokaleViewForm.Show();
+            lokaleViewForm.ShowDialog();
+            this.Show();
         }
 
         private void LokaleRedigerButton_Click(object sender, EventArgs e)
         {
             lokaleRedigerForm lokaleRedigerForm = new lokaleRedigerForm();
             this.Hide();
-            lokaleRedigerForm.Show();
+            lokaleRedigerForm.ShowDialog();
+            this.Show();
         }
 
         private void BrugerRedigerButton_Click(object sender, EventArgs e)
         {
             brugerRedigerForm brugerRedigerForm = new brugerRedigerForm();
             this.Hide();
-            brugerRedigerForm.Show();
+            brugerRedigerForm.ShowDialog();
+            this.Show();
         }
 
         private void BrugerHistorikButton_Click(object sender, EventArgs e)
         {
             brugerHistorikForm brugerHistorikForm = new brugerHistorikForm();
             this.Hide();
-            brugerHistorikForm.Show();
+            brugerHistorikForm.ShowDialog();
+            this.Show();
         }
 
         private void LokaleHistorikButton_Click(object sender, EventArgs e)
         {
             lokaleHistorikForm lokaleHistorikForm = new lokaleHistorikForm();
             this.Hide();
-            lokaleHistorikForm.Show();
+            lokaleHistorikForm.ShowDialog();
+            this.Show();
         }
 
         private void AdminForm_Load(object sender, EventArgs e)
