@@ -4,3 +4,17 @@ C:\Users\POU\Desktop\JimAndRune\BookingProgram\Mailtest\bin\Debug\Mailtest.pdb
 C:\Users\POU\Desktop\JimAndRune\BookingProgram\Mailtest\obj\Debug\Mailtest.csprojResolveAssemblyReference.cache
 C:\Users\POU\Desktop\JimAndRune\BookingProgram\Mailtest\obj\Debug\Mailtest.exe
 C:\Users\POU\Desktop\JimAndRune\BookingProgram\Mailtest\obj\Debug\Mailtest.pdb
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Mailtest\obj\Debug\Mailtest.csprojResolveAssemblyReference.cache
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Mailtest\bin\Debug\Mailtest.exe.config
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Mailtest\bin\Debug\Mailtest.exe
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Mailtest\bin\Debug\Mailtest.pdb
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Mailtest\bin\Debug\Context.dll
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Mailtest\bin\Debug\EntityFramework.dll
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Mailtest\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Mailtest\bin\Debug\Mail.dll
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Mailtest\bin\Debug\Context.pdb
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Mailtest\bin\Debug\EntityFramework.xml
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Mailtest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Mailtest\bin\Debug\Mail.xml
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Mailtest\obj\Debug\Mailtest.exe
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Mailtest\obj\Debug\Mailtest.pdb

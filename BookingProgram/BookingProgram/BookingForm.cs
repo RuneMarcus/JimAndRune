@@ -42,6 +42,8 @@ namespace BookingProgram
                             from lokale in context.Lokaler
                             select lokale;
 
+                
+
                 foreach (Context.Lokale result in lokale_query)
                 {
                     comboBox1.Items.Add(result.lokaleID);

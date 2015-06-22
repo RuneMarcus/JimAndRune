@@ -18,3 +18,12 @@ C:\Users\POU\Desktop\JimAndRune\BookingProgram\Context\bin\Debug\EntityFramework
 C:\Users\POU\Desktop\JimAndRune\BookingProgram\Context\obj\Debug\Context.csprojResolveAssemblyReference.cache
 C:\Users\POU\Desktop\JimAndRune\BookingProgram\Context\obj\Debug\Context.dll
 C:\Users\POU\Desktop\JimAndRune\BookingProgram\Context\obj\Debug\Context.pdb
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Context\bin\Debug\Context.dll.config
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Context\bin\Debug\Context.dll
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Context\bin\Debug\Context.pdb
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Context\bin\Debug\EntityFramework.dll
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Context\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Context\bin\Debug\EntityFramework.xml
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Context\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Context\obj\Debug\Context.dll
+C:\Users\52948\Desktop\JimAndRune\BookingProgram\Context\obj\Debug\Context.pdb
