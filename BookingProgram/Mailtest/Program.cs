@@ -20,8 +20,16 @@ namespace Mailtest
 
         static void Main(string[] args)
         {
+            Console.WriteLine("Send Mail Program Started!");
             Thread th1 = new Thread(bookingservice);
             th1.Start();
+            var p = new Program();
+            while (true)
+            {
+                p.sendMail();
+                Thread.Sleep(5000);
+            }
+            
         }
 
         public static void bookingservice()
@@ -126,6 +134,68 @@ namespace Mailtest
                 context.SaveChanges();
             }
             
+        }
+        public void sendMail()
+        {
+            using (Context.BookingContext context = new Context.BookingContext())
+            {
+
+                var booking_query =
+                        from booking in context.Bookings
+                        where booking.godkendt == false
+                        select booking;
+
+                foreach (var result in booking_query)
+                {
+                    int brugerIDs = result.Bruger.brugerID;
+                    int lokaleIDs = result.Lokale.lokaleID;
+                    string fornavne = result.Bruger.fornavn;
+                    string brugerEmail = result.Bruger.email;
+                    DateTime StartTime = result.startTidspunkt;
+                    DateTime EndTime = result.slutTidspunkt;
+
+
+                    var fromAddress = new MailAddress("VoresBookingService@gmail.com", "From BookingServiceMail");
+                    var toAddress = new MailAddress(brugerEmail, "To " + fornavne);
+                    const string fromPassword = "jimogrune";
+                    string subject = "Hej " + fornavne + "!";
+                    string body = "Tak for din booking. \nBook start tid:" + StartTime + " Book slut tid:" + EndTime + "\nVi vil straks sørger for at dette lokale er klar når du skal bruge det. \nMed Venlig Hilsen BookingService.";
+
+                    var smtp = new SmtpClient
+                    {
+                        Host = "smtp.gmail.com",
+                        Port = 587,
+                        EnableSsl = true,
+                        DeliveryMethod = SmtpDeliveryMethod.Network,
+                        UseDefaultCredentials = false,
+                        Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                    };
+                    using (var message = new MailMessage(fromAddress, toAddress)
+                    {
+                        Subject = subject,
+                        Body = body
+                    })
+                    {
+                        smtp.Send(message);
+                    }
+
+                    var bookingchange = new Booking() { BookingID = 1, godkendt = true };
+
+                    Booking stud;
+                    using (var ctx = new BookingContext())
+                    {
+                        stud = ctx.Bookings.Where(s => s.BookingID == result.BookingID).FirstOrDefault<Booking>();
+                    }
+                    stud.godkendt = true;
+
+                    using (var ctx = new BookingContext())
+                    {
+                        ctx.Entry(stud).State = System.Data.Entity.EntityState.Modified;
+                        ctx.SaveChanges();
+                    }
+                }
+
+            }
         }
     }
 }
