@@ -16,7 +16,7 @@ namespace Mailtest
 {
     class Program
     {
-
+        static string failmail;
 
         static void Main(string[] args)
         {
@@ -34,6 +34,8 @@ namespace Mailtest
 
         public static void bookingservice()
         {
+            
+
             Console.WriteLine("Booking Service - Started...");
             Console.WriteLine("Listening for mails...");
             while (true)
@@ -53,6 +55,7 @@ namespace Mailtest
 
                         Console.WriteLine(mail.Subject);
                         Console.WriteLine(mail.Text);
+                        failmail = mail.Sender.Address;
                         createBooking(findUser(mail.Sender.Address), findLokale(mail.Text) , mail.Text);
                     }
                     imap.Close();
@@ -61,13 +64,13 @@ namespace Mailtest
             }
         }
 
-        public void FailResponceMail()
+        public static void FailResponceMail(string mailaddress)
         {
             var fromAddress = new MailAddress("voresBookingService@gmail.com", "Darude Booking");
-            var toAddress = new MailAddress("jimpoulsen9@gmail.com", "sandstorm");
+            var toAddress = new MailAddress(mailaddress, "sandstorm");
             const string fromPassword = "jimogrune";
-            const string subject = "Hello";
-            const string body = "Learn 2 english, plz";
+            const string subject = "Your mail failed, here's an example";
+            const string body = "Example: 'lokale 1 starttid 2015-02-02-12-00-00 sluttid 2015-02-02-14-00-00'";
 
             var smtp = new SmtpClient
             {
@@ -105,35 +108,51 @@ namespace Mailtest
 
         public static Lokale findLokale(string mailtext)
         {
-
+            Lokale nothing = null;
+            try 
+            { 
             int lokaleIdentifier = Convert.ToInt32(mailtext.Split(' ')[1]);
             using (Context.BookingContext context = new BookingContext())
             {
                 return context.Lokaler.Find(lokaleIdentifier);
             }
+            }
+            catch
+            {
+                Console.WriteLine("Wrong input");
+                FailResponceMail(failmail);
+                return nothing;
+            }
         }
 
         public static void createBooking(Bruger user_obj, Lokale lokale_obj, string mailtext)
         {
-            string time = mailtext.Split(' ')[3];
-            string time2 = mailtext.Split(' ')[5];
-            time2 = time2.Replace("\r\n", "");
-            DateTime starttid = DateTime.ParseExact(time, "yyyy-MM-dd-HH-mm-ss", null);
-            DateTime sluttid = DateTime.ParseExact(time2, "yyyy-MM-dd-HH-mm-ss", null);
-            using (Context.BookingContext context = new BookingContext())
+            try
             {
-                Booking booking = new Booking()
+                string time = mailtext.Split(' ')[3];
+                string time2 = mailtext.Split(' ')[5];
+                time2 = time2.Replace("\r\n", "");
+                DateTime starttid = DateTime.ParseExact(time, "yyyy-MM-dd-HH-mm-ss", null);
+                DateTime sluttid = DateTime.ParseExact(time2, "yyyy-MM-dd-HH-mm-ss", null);
+                using (Context.BookingContext context = new BookingContext())
                 {
-                    Bruger = user_obj,
-                    Lokale = lokale_obj,
-                    startTidspunkt = starttid,
-                    slutTidspunkt = sluttid,
-                    godkendt = false
-                };
-                context.Bookings.Add(booking);
-                context.SaveChanges();
+                    Booking booking = new Booking()
+                    {
+                        Bruger = user_obj,
+                        Lokale = lokale_obj,
+                        startTidspunkt = starttid,
+                        slutTidspunkt = sluttid,
+                        godkendt = false
+                    };
+                    context.Bookings.Add(booking);
+                    context.SaveChanges();
+                }
             }
-            
+            catch
+            {
+                Console.WriteLine("Wrong input");
+                FailResponceMail(user_obj.email);
+            }
         }
         public void sendMail()
         {

@@ -62,13 +62,9 @@ C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\bin\Debug\Bookin
 C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\bin\Debug\Context.dll
 C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\bin\Debug\EntityFramework.dll
 C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\bin\Debug\Mailtest.exe
-C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\bin\Debug\Mail.dll
 C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\bin\Debug\Context.pdb
-C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\bin\Debug\Mailtest.pdb
 C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\bin\Debug\EntityFramework.xml
 C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\bin\Debug\Mail.xml
 C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\obj\Debug\BookingProgram.csprojResolveAssemblyReference.cache
 C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\obj\Debug\BookingProgram.AdminForm.resources
 C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\obj\Debug\BookingProgram.BookingForm.resources
@@ -76,7 +72,6 @@ C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\obj\Debug\Bookin
 C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\obj\Debug\BookingProgram.BrugerForm.resources
 C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\obj\Debug\BookingProgram.brugerHistorikForm.resources
 C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\obj\Debug\BookingProgram.brugerOpretForm.resources
-C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\obj\Debug\BookingProgram.brugerRedigerForm.resources
 C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\obj\Debug\BookingProgram.brugerSletForm.resources
 C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\obj\Debug\BookingProgram.brugerViewForm.resources
 C:\Users\52948\Desktop\JimAndRune\BookingProgram\BookingProgram\obj\Debug\BookingProgram.lokaleHistorikForm.resources

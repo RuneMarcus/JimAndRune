@@ -88,12 +88,15 @@
     <Compile Include="brugerOpretForm.Designer.cs">
       <DependentUpon>brugerOpretForm.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
     <Compile Include="brugerRedigerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="brugerRedigerForm.designer.cs">
       <DependentUpon>brugerRedigerForm.cs</DependentUpon>
     </Compile>
+>>>>>>> origin/master
     <Compile Include="brugerViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,9 +215,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="brugerOpretForm.resx">
       <DependentUpon>brugerOpretForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="brugerRedigerForm.resx">
-      <DependentUpon>brugerRedigerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="brugerSletForm.resx">
       <DependentUpon>brugerSletForm.cs</DependentUpon>
