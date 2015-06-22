@@ -62,6 +62,15 @@ namespace BookingProgram
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            deletebookingform delbookform = new deletebookingform(bruger);
+
+            this.Hide();
+            delbookform.ShowDialog();
+            this.Show();
+        }
+
         
 
         
