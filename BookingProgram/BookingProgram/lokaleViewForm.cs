@@ -15,12 +15,39 @@ namespace BookingProgram
         public lokaleViewForm()
         {
             InitializeComponent();
+            populateListview();
         }
 
-        private void lokaleViewForm_Load(object sender, EventArgs e)
+        public void populateListview()
         {
-            // TODO: This line of code loads data into the '_Context_BookingContextDataSet4.Lokaler' table. You can move, or remove it, as needed.
-            this.lokalerTableAdapter.Fill(this._Context_BookingContextDataSet4.Lokaler);
+
+            using (Context.BookingContext context = new Context.BookingContext())
+            {
+                var query = from lokale in context.Lokaler
+                            select lokale;
+
+
+                foreach (var result in query)
+                {
+                    ListViewItem item = new ListViewItem(result.addresse);
+                    item.SubItems.Add(result.postnummer);
+                    item.SubItems.Add(result.areal.ToString());
+                    item.SubItems.Add(result.pladsTil.ToString());
+                    item.SubItems.Add(result.lokaleID.ToString());
+                    listView1.Items.Add(item);
+                }
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Hide();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
