@@ -22,8 +22,6 @@ namespace Mailtest
         {
             Thread th1 = new Thread(bookingservice);
             th1.Start();
-
-            //Thread th2;
         }
 
         public static void bookingservice()
