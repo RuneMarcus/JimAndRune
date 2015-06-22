@@ -105,6 +105,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="deletebookingform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deletebookingform.Designer.cs">
+      <DependentUpon>deletebookingform.cs</DependentUpon>
+    </Compile>
     <Compile Include="lokaleHistorikForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="brugerViewForm.resx">
       <DependentUpon>brugerViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="deletebookingform.resx">
+      <DependentUpon>deletebookingform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lokaleHistorikForm.resx">
       <DependentUpon>lokaleHistorikForm.cs</DependentUpon>

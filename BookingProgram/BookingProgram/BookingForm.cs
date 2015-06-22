@@ -59,11 +59,8 @@ namespace BookingProgram
 
             using (Context.BookingContext context = new Context.BookingContext())
             {
-                var lokale =
-                            context.Lokaler.Find(lokalePick);
-
-                var user =
-                            context.Brugere.Find(userId);
+                var lokale = context.Lokaler.Find(lokalePick);
+                var user = context.Brugere.Find(userId);
 
 
 
