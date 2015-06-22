@@ -29,102 +29,33 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.brugerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fornavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.efternavnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addresseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.administratorDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.brugereBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._Context_BookingContextDataSet3 = new BookingProgram._Context_BookingContextDataSet3();
             this.brugereTableAdapter = new BookingProgram._Context_BookingContextDataSet3TableAdapters.BrugereTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.fornavnColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.efternavnColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.emailColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.addresseColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.brugerIDColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.telefonColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.administratorColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this._Context_BookingContextDataSet1 = new BookingProgram._Context_BookingContextDataSet();
+            this.redigerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sletBrugerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sletBrugerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this._Context_BookingContextDataSet3 = new BookingProgram._Context_BookingContextDataSet3();
             ((System.ComponentModel.ISupportInitialize)(this.brugereBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Context_BookingContextDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._Context_BookingContextDataSet3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.brugerIDDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn,
-            this.fornavnDataGridViewTextBoxColumn,
-            this.efternavnDataGridViewTextBoxColumn,
-            this.telefonDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.addresseDataGridViewTextBoxColumn,
-            this.administratorDataGridViewCheckBoxColumn});
-            this.dataGridView1.DataSource = this.brugereBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 94);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(837, 351);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // brugerIDDataGridViewTextBoxColumn
-            // 
-            this.brugerIDDataGridViewTextBoxColumn.DataPropertyName = "brugerID";
-            this.brugerIDDataGridViewTextBoxColumn.HeaderText = "brugerID";
-            this.brugerIDDataGridViewTextBoxColumn.Name = "brugerIDDataGridViewTextBoxColumn";
-            this.brugerIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            // 
-            // fornavnDataGridViewTextBoxColumn
-            // 
-            this.fornavnDataGridViewTextBoxColumn.DataPropertyName = "fornavn";
-            this.fornavnDataGridViewTextBoxColumn.HeaderText = "fornavn";
-            this.fornavnDataGridViewTextBoxColumn.Name = "fornavnDataGridViewTextBoxColumn";
-            // 
-            // efternavnDataGridViewTextBoxColumn
-            // 
-            this.efternavnDataGridViewTextBoxColumn.DataPropertyName = "efternavn";
-            this.efternavnDataGridViewTextBoxColumn.HeaderText = "efternavn";
-            this.efternavnDataGridViewTextBoxColumn.Name = "efternavnDataGridViewTextBoxColumn";
-            // 
-            // telefonDataGridViewTextBoxColumn
-            // 
-            this.telefonDataGridViewTextBoxColumn.DataPropertyName = "telefon";
-            this.telefonDataGridViewTextBoxColumn.HeaderText = "telefon";
-            this.telefonDataGridViewTextBoxColumn.Name = "telefonDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // addresseDataGridViewTextBoxColumn
-            // 
-            this.addresseDataGridViewTextBoxColumn.DataPropertyName = "addresse";
-            this.addresseDataGridViewTextBoxColumn.HeaderText = "addresse";
-            this.addresseDataGridViewTextBoxColumn.Name = "addresseDataGridViewTextBoxColumn";
-            // 
-            // administratorDataGridViewCheckBoxColumn
-            // 
-            this.administratorDataGridViewCheckBoxColumn.DataPropertyName = "administrator";
-            this.administratorDataGridViewCheckBoxColumn.HeaderText = "administrator";
-            this.administratorDataGridViewCheckBoxColumn.Name = "administratorDataGridViewCheckBoxColumn";
             // 
             // brugereBindingSource
             // 
             this.brugereBindingSource.DataMember = "Brugere";
-            this.brugereBindingSource.DataSource = this._Context_BookingContextDataSet3;
-            // 
-            // _Context_BookingContextDataSet3
-            // 
-            this._Context_BookingContextDataSet3.DataSetName = "_Context_BookingContextDataSet3";
-            this._Context_BookingContextDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // brugereTableAdapter
             // 
@@ -146,23 +77,111 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
+            this.button1.Text = "Tilbage";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.fornavnColumn,
+            this.efternavnColumn,
+            this.emailColumn,
+            this.addresseColumn,
+            this.brugerIDColumn,
+            this.telefonColumn,
+            this.administratorColumn});
+            this.listView1.LabelEdit = true;
+            this.listView1.Location = new System.Drawing.Point(12, 79);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(819, 293);
+            this.listView1.TabIndex = 3;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
+            // fornavnColumn
+            // 
+            this.fornavnColumn.Text = "Fornavn";
+            this.fornavnColumn.Width = 92;
+            // 
+            // efternavnColumn
+            // 
+            this.efternavnColumn.Text = "Efternavn";
+            this.efternavnColumn.Width = 105;
+            // 
+            // emailColumn
+            // 
+            this.emailColumn.Text = "Email";
+            this.emailColumn.Width = 162;
+            // 
+            // addresseColumn
+            // 
+            this.addresseColumn.Text = "Addresse";
+            this.addresseColumn.Width = 173;
+            // 
+            // brugerIDColumn
+            // 
+            this.brugerIDColumn.Text = "BrugerID";
+            // 
+            // telefonColumn
+            // 
+            this.telefonColumn.Text = "TelefonNr";
+            this.telefonColumn.Width = 135;
+            // 
+            // administratorColumn
+            // 
+            this.administratorColumn.Text = "Administrator";
+            this.administratorColumn.Width = 86;
+            // 
+            // _Context_BookingContextDataSet1
+            // 
+            this._Context_BookingContextDataSet1.DataSetName = "_Context_BookingContextDataSet";
+            this._Context_BookingContextDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // redigerToolStripMenuItem
+            // 
+            this.redigerToolStripMenuItem.Name = "redigerToolStripMenuItem";
+            this.redigerToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // sletBrugerToolStripMenuItem
+            // 
+            this.sletBrugerToolStripMenuItem.Name = "sletBrugerToolStripMenuItem";
+            this.sletBrugerToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // sletBrugerToolStripMenuItem1
+            // 
+            this.sletBrugerToolStripMenuItem1.Name = "sletBrugerToolStripMenuItem1";
+            this.sletBrugerToolStripMenuItem1.Size = new System.Drawing.Size(32, 19);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 19);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(32, 19);
+            // 
+            // _Context_BookingContextDataSet3
+            // 
+            this._Context_BookingContextDataSet3.DataSetName = "_Context_BookingContextDataSet3";
+            this._Context_BookingContextDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // brugerViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(861, 457);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
             this.Name = "brugerViewForm";
             this.Text = "brugerViewForm";
             this.Load += new System.EventHandler(this.brugerViewForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.brugereBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._Context_BookingContextDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._Context_BookingContextDataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -171,19 +190,24 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private _Context_BookingContextDataSet3 _Context_BookingContextDataSet3;
         private System.Windows.Forms.BindingSource brugereBindingSource;
         private _Context_BookingContextDataSet3TableAdapters.BrugereTableAdapter brugereTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn brugerIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fornavnDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn efternavnDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn addresseDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn administratorDataGridViewCheckBoxColumn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListView listView1;
+        private _Context_BookingContextDataSet _Context_BookingContextDataSet1;
+        private System.Windows.Forms.ColumnHeader fornavnColumn;
+        private System.Windows.Forms.ColumnHeader efternavnColumn;
+        private System.Windows.Forms.ColumnHeader emailColumn;
+        private System.Windows.Forms.ColumnHeader addresseColumn;
+        private System.Windows.Forms.ColumnHeader brugerIDColumn;
+        private System.Windows.Forms.ColumnHeader telefonColumn;
+        private System.Windows.Forms.ColumnHeader administratorColumn;
+        private System.Windows.Forms.ToolStripMenuItem redigerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sletBrugerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sletBrugerToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private _Context_BookingContextDataSet3 _Context_BookingContextDataSet3;
     }
 }
