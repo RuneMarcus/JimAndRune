@@ -322,10 +322,6 @@
       <Project>{7a14336b-7afa-41a8-b88b-89402c2275bc}</Project>
       <Name>Context</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Mailtest\Mailtest.csproj">
-      <Project>{d5dd815b-b699-49b9-9dd9-9891aa5f56d8}</Project>
-      <Name>Mailtest</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

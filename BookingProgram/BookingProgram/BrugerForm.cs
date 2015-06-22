@@ -27,17 +27,28 @@ namespace BookingProgram
 
         private void button1_Click(object sender, EventArgs e)
         {
-            System.Data.SqlClient.SqlConnection sqlConnection1 =
-                new System.Data.SqlClient.SqlConnection(@"Data Source=np:\\.\pipe\LOCALDB#DF7C19C3\tsql\query;Initial Catalog=Context.BookingContext;Integrated Security=True");
+            var confirmResult = MessageBox.Show("Are you sure you want to delete your user?",
+                                     "Confirm Delete!!",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                System.Data.SqlClient.SqlConnection sqlConnection1 =
+                new System.Data.SqlClient.SqlConnection(@"Data Source=np:\\.\pipe\LOCALDB#F9A40D61\tsql\query;Initial Catalog=Context.BookingContext;Integrated Security=True");
 
-            System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
-            cmd.CommandType = System.Data.CommandType.Text;
-            cmd.CommandText = "DELETE Brugere WHERE BrugerID = " + bruger;
-            cmd.Connection = sqlConnection1;
+                System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+                cmd.CommandType = System.Data.CommandType.Text;
+                cmd.CommandText = "DELETE Brugere WHERE BrugerID = " + bruger;
+                cmd.Connection = sqlConnection1;
 
-            sqlConnection1.Open();
-            cmd.ExecuteNonQuery();
-            sqlConnection1.Close();
+                sqlConnection1.Open();
+                cmd.ExecuteNonQuery();
+                sqlConnection1.Close();
+
+                BookingGUI bookingGUI = new BookingGUI();
+                this.Hide();
+                bookingGUI.Show();
+
+            }
         }
 
         private void Booking_Click(object sender, EventArgs e)

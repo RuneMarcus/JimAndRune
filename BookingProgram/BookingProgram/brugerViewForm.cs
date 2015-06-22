@@ -15,18 +15,56 @@ namespace BookingProgram
         public brugerViewForm()
         {
             InitializeComponent();
+            populateListview();
         }
 
         private void brugerViewForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_Context_BookingContextDataSet3.Brugere' table. You can move, or remove it, as needed.
-            this.brugereTableAdapter.Fill(this._Context_BookingContextDataSet3.Brugere);
+
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.OK;
+            this.Hide();
+        }
+
+        public void populateListview()
+        {
+
+            using (Context.BookingContext context = new Context.BookingContext())
+            {
+                var query = from bruger in context.Brugere
+                            select bruger;
+
+
+                foreach (var result in query)
+                {
+                    ListViewItem item = new ListViewItem(result.fornavn);
+                    item.SubItems.Add(result.efternavn);
+                    item.SubItems.Add(result.email);
+                    item.SubItems.Add(result.addresse);
+                    item.SubItems.Add(result.brugerID.ToString());
+                    item.SubItems.Add(result.telefon);
+                    item.SubItems.Add(result.administrator.ToString());
+                    listView1.Items.Add(item);
+                }
+            }
+        
+        }
+
+
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
+
+
+
+        
+        
+
     }
 }

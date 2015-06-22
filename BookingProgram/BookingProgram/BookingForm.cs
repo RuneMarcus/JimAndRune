@@ -78,36 +78,11 @@ namespace BookingProgram
                         Convert.ToInt32(MonthDrop.Text), 
                         Convert.ToInt32(DayDrop.Text),
                         Convert.ToInt32(ToDrop.Text), 00, 00),
-                    godkendt = true
+                    godkendt = false
                 };
 
                 context.Bookings.Add(bookings);
                 context.SaveChanges();
-
-                var fromAddress = new MailAddress("VoresBookingService@gmail.com", "From BookingServiceMail");
-                var toAddress = new MailAddress(emails, "To " + fornavne);
-                const string fromPassword = "jimogrune";
-                string subject = "Hej " + fornavne + "!";
-                string body = "Tak for din booking. \\nBook start tid:" + bookings.startTidspunkt + " Book slut tid:" + bookings.slutTidspunkt + "\\nVi vil straks sørger for at dette lokale er klar når du skal bruge det. \\nMed Venlig Hilsen BookingService.";
-
-                var smtp = new SmtpClient
-                {
-                    Host = "smtp.gmail.com",
-                    Port = 587,
-                    EnableSsl = true,
-                    DeliveryMethod = SmtpDeliveryMethod.Network,
-                    UseDefaultCredentials = false,
-                    Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
-                };
-                using (var message = new MailMessage(fromAddress, toAddress)
-                {
-                    Subject = subject,
-                    Body = body
-                })
-                {
-                    smtp.Send(message);
-                }
-                
             }
 
                 
