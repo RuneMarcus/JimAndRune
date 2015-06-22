@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace BookingProgram
@@ -26,7 +25,7 @@ namespace BookingProgram
         private void brugerRedigerForm_Load(object sender, EventArgs e)
         {
             con = new SqlConnection();
-            con.ConnectionString = @"Data Source=np:\\.\pipe\LOCALDB#F9A40D61\tsql\query;Initial Catalog=Context.BookingContext;Integrated Security=True";
+            con.ConnectionString = @"Data Source=np:\\.\pipe\LOCALDB#9A432131\tsql\query;Initial Catalog=Context.BookingContext;Integrated Security=True";
             con.Open();
             adap = new SqlDataAdapter("select brugerID, fornavn, efternavn, telefon, email, addresse, administrator from Brugere", con);
             ds = new System.Data.DataSet();
