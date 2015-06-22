@@ -25,7 +25,7 @@ namespace BookingProgram
             BookingGUI loginForm = new BookingGUI();
 
             loginForm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void BrugerOpretButton_Click(object sender, EventArgs e)
@@ -91,10 +91,10 @@ namespace BookingProgram
 
         private void BrugerRedigerButton_Click(object sender, EventArgs e)
         {
-            brugerRedigerForm brugerRedigerForm = new brugerRedigerForm();
-            this.Hide();
-            brugerRedigerForm.ShowDialog();
-            this.Show();
+        //    brugerRedigerForm brugerRedigerForm = new brugerRedigerForm();
+        //    this.Hide();
+        //    brugerRedigerForm.ShowDialog();
+        //    this.Show();
         }
 
         private void BrugerHistorikButton_Click(object sender, EventArgs e)

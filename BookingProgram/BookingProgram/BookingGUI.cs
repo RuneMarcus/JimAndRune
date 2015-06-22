@@ -96,8 +96,9 @@ namespace BookingProgram
         {
             nybrugerForm nybrugerForm = new nybrugerForm();
 
-            this.Hide();
+            this.Close();
             nybrugerForm.Show();
+            this.Close();
         }
 
 
